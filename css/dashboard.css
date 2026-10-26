@@ -1,0 +1,161 @@
+/* Start Variables */
+:root {
+  --main-color: ;
+  --main-color-alt: ;
+  --main-transition: ;
+  --main-padding-top: ;
+  --main-padding-bottom: ;
+  --section-background: ;
+}
+/* End Variables */
+/* Start Globel Rules */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+ul {
+    list-style: none;
+}
+a {
+  text-decoration: none;
+}
+*:focus {
+    outline: none;
+}
+/* Smallar Mobile S */
+@media (min-width: 320px){
+  .container {
+    width: 315px;
+  }
+}
+/* Smallar Mobile M */
+@media (min-width: 375px){
+  .container {
+    width: 365px;
+  }
+}
+/* Smallar Mobile L */
+@media (min-width: 425px){
+  .container {
+    width: 415px;
+  }
+}
+/* Small & Tablet */
+@media (min-width: 768px){
+  .container {
+    width: 753px;
+  }
+}
+/* Medium */
+@media (min-width: 992px){
+  .container {
+    width: 969px;
+  }
+}
+/* Large */
+@media (min-width: 1200px){
+  .container {
+    width: 1170px;
+  }
+}
+/* End Globel Rules */
+
+.page {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f1f5f9;
+}
+/* Start Sidebar */
+.page .sidebar {
+    background-color: white;
+    padding: 20px;
+    position: relative;
+    width: 250px;
+    box-shadow: 0 0 10px #ddd;
+}
+.page .sidebar h3 {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+    .page .sidebar h3 {
+        font-size: 14px;
+    }
+}
+.page .sidebar h3::before {
+    content: "";
+    background-color: black;
+    width: 80px;
+    height: 2px;
+    position: absolute;
+    bottom: -20px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.page .sidebar h3::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    transform: translateX(-50%);
+    bottom: -32px;
+    border-radius: 50%;
+    background-color: black;
+    border: 5px solid white;
+}
+@media (max-width: 767px) {
+    .page .sidebar h3::before {
+        width: 55px;
+    }
+}
+@media (max-width: 767px) {
+    .page .sidebar h3::after {
+        width: 14px;
+        height: 14px;
+        bottom: -31px;
+    }
+}
+.page .sidebar ul li a {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: black;
+    border-radius: 6px;
+    padding: 10px;
+    transition: 0,3s;
+    margin-bottom: 5px;
+}
+.page .sidebar ul li a:hover,
+.page .sidebar ul li a.active {
+    background-color: #f6f6f6;
+}
+.page .sidebar ul li a span {
+    padding: 5px;
+    margin-left: 10px;
+}
+@media (max-width: 767px) {
+    .page .sidebar ul li a span {
+        display: none;
+    }
+}
+@media (max-width: 767px) {
+    .page .sidebar {
+        width: 60px;
+        padding: 10px;
+    }
+}
+/* End Sidebar */
