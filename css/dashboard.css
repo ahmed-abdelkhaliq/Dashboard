@@ -1,11 +1,16 @@
 /* Start Variables */
 :root {
-  --main-color: ;
-  --main-color-alt: ;
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --grey-color: #888;
   --main-transition: ;
   --main-padding-top: ;
   --main-padding-bottom: ;
   --section-background: ;
+  --fa-style-family-classic: "Font Awesome 7 Free"
 }
 /* End Variables */
 /* Start Globel Rules */
@@ -30,9 +35,6 @@ ul {
 }
 a {
   text-decoration: none;
-}
-*:focus {
-    outline: none;
 }
 /* Smallar Mobile S */
 @media (min-width: 320px){
@@ -85,6 +87,12 @@ a {
     width: 250px;
     box-shadow: 0 0 10px #ddd;
 }
+@media (max-width: 767px) {
+    .page .sidebar {
+        width: 60px;
+        padding: 20px 8px;
+    }
+}
 .page .sidebar h3 {
     position: relative;
     text-align: center;
@@ -92,7 +100,7 @@ a {
 }
 @media (max-width: 767px) {
     .page .sidebar h3 {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 .page .sidebar h3::before {
@@ -109,10 +117,10 @@ a {
     content: "";
     position: absolute;
     left: 50%;
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
     transform: translateX(-50%);
-    bottom: -32px;
+    bottom: -31px;
     border-radius: 50%;
     background-color: black;
     border: 5px solid white;
@@ -124,9 +132,9 @@ a {
 }
 @media (max-width: 767px) {
     .page .sidebar h3::after {
-        width: 14px;
-        height: 14px;
-        bottom: -31px;
+        width: 12px;
+        height: 12px;
+        bottom: -30px;
     }
 }
 .page .sidebar ul li a {
@@ -152,10 +160,212 @@ a {
         display: none;
     }
 }
+/* End Sidebar */
+/* Start content */
+.content {
+  width: 100%;
+  overflow: hidden;
+}
+/* End content */
+/* Start Head */
+.content .head {
+  background-color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content .head .search {
+  position: relative;
+}
+.content .head .search::before {
+  font-family: var(--fa-style-family-classic);
+  content: "\f002";
+  font-weight: 900;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 15px;
+  font-size: 14px;
+  color: var(--grey-color);
+}
+.content .head .search input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-left: 5px;
+  padding-left: 30px;
+  width: 180px;
+  transition: width 0.4s;
+}
+.content .head .search input:focus {
+  width: 250px;
+  outline-color: var(--blue-alt-color);
+}
 @media (max-width: 767px) {
-    .page .sidebar {
-        width: 60px;
-        padding: 10px;
+    .content .head .search input:focus {
+      width: 180px;
     }
 }
-/* End Sidebar */
+.content .head .search input:focus::placeholder {
+  opacity: 0;
+}
+.content .head .icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+    .content .head .icons {
+      gap: 15px;
+    }
+}
+.content .head .icons img {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+@media (max-width: 767px) {
+    .content .head .icons img {
+      width: 32px;
+      height: 32px;
+    }
+}
+.content .head .icons .notification {
+  position: relative;
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+    .content .head .icons .notification {
+      font-size: 16px;
+    }
+}
+.content .head .icons .notification::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--red-color);
+  border-radius: 50%;
+  right: -5px;
+  top: -5px;
+}
+/* End Head */
+
+.page .content h1 {
+  position: relative;
+}
+.page .content .wrapper {
+  display: grid;
+  gap: 20;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  margin: 0 20px;
+}
+@media (max-width: 767px) {
+    .page .content .wrapper {
+      display: grid;
+      gap: 10;
+      grid-template-columns: minmax(200px, 1fr);
+      margin: 0 10px;
+    }
+}
+/* Start welcome Widget */
+.page .content .wrapper .welcome {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+    .page .content .wrapper .welcome {
+      text-align: center;
+      display: block;
+    }
+}
+.page .content .wrapper .welcome .intro {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+}
+@media (max-width: 767px) {
+    .page .content .wrapper .intro {
+      padding-bottom: 30px;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+}
+.page .content .wrapper .welcome .intro h2 {
+  margin: 0;
+}
+.page .content .wrapper .welcome .intro p {
+  color: var(--grey-color);
+  margin-top: 5px;
+}
+.page .content .wrapper .welcome .intro img {
+  width: 170px;
+  margin-bottom: -10px;
+}
+.page .content .wrapper .welcome .avatar {
+  width: 64px;
+  height: 64px;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 2px;
+  box-shadow: 0 0 10px #ddd;
+  margin: -32px 0 0 20px;
+}
+@media (max-width: 767px) {
+    .page .content .wrapper .welcome .avatar {
+      margin: 1px 0 0;
+    }
+}
+.page .content .wrapper .welcome .body {
+  text-align: center;
+  display: flex;
+  padding: 20px;
+  margin: 20px 0px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+    .page .content .wrapper .welcome .body {
+      display: block;
+      margin: 0 0 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .page .content .wrapper .welcome .body > div:not(:last-child) {
+      margin-bottom: 20px;
+}
+}
+.page .content .wrapper .welcome .body > div span {
+  display: block;
+  color: var(--grey-color);
+  margin-top: 10px;
+  font-size: 14px;
+  flex: 1;
+}
+.page .content .wrapper .welcome .visit {
+  display: block;
+  font-size: 14px;
+  border-radius: 6px;
+  background-color: var(--blue-color);
+  color: white;
+  width: fit-content;
+  margin: 0 15px 15px auto;
+  padding: 10px;
+  transition: 0.4s;
+}
+@media (max-width: 767px) {
+    .page .content .wrapper .welcome .visit {
+      margin: 0 auto 15px;
+    }
+}
+.page .content .wrapper .welcome .visit:hover {
+  background-color: var(--blue-alt-color);
+}
+/* End welcome Widget */
