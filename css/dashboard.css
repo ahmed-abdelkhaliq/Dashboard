@@ -578,3 +578,60 @@ background-color: rgb(245 158 11 / 20%);
 background-color: rgb(34 197 94 / 20%);
 }
 /* End Targets */
+/* Start Tickets */
+.page .content .wrapper .tickets {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.page .content .wrapper .tickets h2 {
+  margin: 0 0 10px;
+}
+.page .content .wrapper .tickets p {
+  margin: 0 0 20px;
+  color: var(--grey-color);
+  font-size: 15px;
+}
+.page .content .wrapper .tickets .box {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.page .content .wrapper .tickets .box .ticket {
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  color: var(--grey-color);
+  border: 1px solid #ccc;
+  width: calc(50% - 10px);
+}
+@media (max-width: 767px) {
+  .page .content .wrapper .tickets .box .ticket {
+    width: 80%;
+  }
+}
+.page .content .wrapper .tickets .box .ticket i {
+  margin-bottom: 10px;
+}
+.page .content .wrapper .tickets .box .ticket .orange {
+  color: var(--orange-color);
+}
+.page .content .wrapper .tickets .box .ticket .blue {
+  color: var(--blue-color);
+}
+.page .content .wrapper .tickets .box .ticket .green {
+  color: var(--green-color);
+}
+.page .content .wrapper .tickets .box .ticket .rad {
+  color: var(--red-color);
+}
+.page .content .wrapper .tickets .box .ticket span {
+  display: block;
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+/* End Tickets */
