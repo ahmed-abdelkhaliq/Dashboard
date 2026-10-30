@@ -461,3 +461,120 @@ a {
   min-height: 130px;
 }
 /* End Quick Draft Widget */
+/* Start Targets */
+.page .content .wrapper .targets {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.page .content .wrapper .targets h2 {
+  margin: 0 0 10px;
+}
+.page .content .wrapper .targets p {
+  margin: 0 0 20px;
+  color: var(--grey-color);
+  font-size: 15px;
+}
+.page .content .wrapper .targets .target-row {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.page .content .wrapper .targets .target-row .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+}
+.page .content .wrapper .targets .blue .icon i {
+  color: var(--blue-color);
+}
+.page .content .wrapper .targets .orange .icon i {
+  color: var(--orange-color);
+}
+.page .content .wrapper .targets .green .icon i {
+  color: var(--green-color);
+}
+.page .content .wrapper .targets .target-row .details {
+  flex: 1;
+}
+.page .content .wrapper .targets .target-row .details span:first-child {
+  font-size: 14px;
+  color: var(--grey-color);
+}
+.page .content .wrapper .targets .target-row .details span:nth-child(2) {
+  display: block;
+  margin: 5px 0 10px;
+  font-weight: bold;
+}
+.page .content .wrapper .targets .target-row .details .progress {
+  position: relative;
+  height: 5px;
+}
+.page .content .wrapper .targets .target-row .details .progress > span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+.page .content .wrapper .targets .target-row .details .progress > .blue {
+  background-color: var(--blue-color);
+}
+.page .content .wrapper .targets .target-row .details .progress > .orange {
+  background-color: var(--orange-color);
+}
+.page .content .wrapper .targets .target-row .details .progress > .green {
+  background-color: var(--green-color);
+}
+.page .content .wrapper .targets .target-row .details .progress > span span {
+  color: white;
+  position: absolute;
+  bottom: 16px;
+  right: -16px;
+  padding: 2px 5px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+.page .content .wrapper .targets .target-row .details .progress > .blue span {
+  background-color: var(--blue-color);
+}
+.page .content .wrapper .targets .target-row .details .progress > .orange span {
+  background-color: var(--orange-color);
+}
+.page .content .wrapper .targets .target-row .details .progress > .green span {
+  background-color: var(--green-color);
+}
+.page .content .wrapper .targets .target-row .details .progress > span span::after {
+  content: "";
+  border-color: transparent;
+  border-width: 6px;
+  border-style: solid;
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translatex(-50%);
+}
+.page .content .wrapper .targets .target-row .details .progress > .blue span::after {
+  border-top-color: var(--blue-color);
+}
+.page .content .wrapper .targets .target-row .details .progress > .orange span::after {
+  border-top-color: var(--orange-color);
+}
+.page .content .wrapper .targets .target-row .details .progress > .green span::after {
+  border-top-color: var(--green-color);
+}
+.page .content .wrapper .targets .blue .icon,
+.page .content .wrapper .targets .blue .progress {
+background-color: rgb(0 117 255 / 20%);
+}
+.page .content .wrapper .targets .orange .icon,
+.page .content .wrapper .targets .orange .progress {
+background-color: rgb(245 158 11 / 20%);
+}
+.page .content .wrapper .targets .green .icon,
+.page .content .wrapper .targets .green .progress {
+background-color: rgb(34 197 94 / 20%);
+}
+/* End Targets */
