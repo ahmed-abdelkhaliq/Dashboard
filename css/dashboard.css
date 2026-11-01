@@ -32,45 +32,10 @@ body {
 }
 ul {
     list-style: none;
+    padding: 0;
 }
 a {
   text-decoration: none;
-}
-/* Smallar Mobile S */
-@media (min-width: 320px){
-  .container {
-    width: 315px;
-  }
-}
-/* Smallar Mobile M */
-@media (min-width: 375px){
-  .container {
-    width: 365px;
-  }
-}
-/* Smallar Mobile L */
-@media (min-width: 425px){
-  .container {
-    width: 415px;
-  }
-}
-/* Small & Tablet */
-@media (min-width: 768px){
-  .container {
-    width: 753px;
-  }
-}
-/* Medium */
-@media (min-width: 992px){
-  .container {
-    width: 969px;
-  }
-}
-/* Large */
-@media (min-width: 1200px){
-  .container {
-    width: 1170px;
-  }
 }
 /* End Globel Rules */
 ::-webkit-scrollbar {
@@ -307,7 +272,7 @@ a {
   overflow: hidden;
   padding: 20px;
 }
-@media (max-width: 767px) {
+@media (max-width: 575px) {
     .page .content .wrapper .welcome {
       text-align: center;
       display: block;
@@ -319,7 +284,7 @@ a {
   justify-content: space-between;
   background-color: #eee;
 }
-@media (max-width: 767px) {
+@media (max-width: 575px) {
     .page .content .wrapper .intro {
       padding-bottom: 30px;
       flex-direction: column;
@@ -346,7 +311,7 @@ a {
   box-shadow: 0 0 10px #ddd;
   margin: -32px 0 0 20px;
 }
-@media (max-width: 767px) {
+@media (max-width: 575px) {
     .page .content .wrapper .welcome .avatar {
       margin: 1px 0 0;
     }
@@ -360,14 +325,14 @@ a {
   border-bottom: 1px solid #eee;
   justify-content: space-between;
 }
-@media (max-width: 767px) {
+@media (max-width: 575px) {
     .page .content .wrapper .welcome .body {
       display: block;
       margin: 0;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
     .page .content .wrapper .welcome .body > div:not(:last-child) {
       margin-bottom: 20px;
 }
@@ -390,7 +355,7 @@ a {
   margin: 0 15px 15px auto;
   transition: 0.4s;
 }
-@media (max-width: 767px) {
+@media (max-width: 575px) {
     .page .content .wrapper .welcome .visit {
       margin: 0 auto 15px;
     }
@@ -607,7 +572,7 @@ background-color: rgb(34 197 94 / 20%);
   border: 1px solid #ccc;
   width: calc(50% - 10px);
 }
-@media (max-width: 767px) {
+@media (max-width: 575px) {
   .page .content .wrapper .tickets .box .ticket {
     width: 80%;
   }
@@ -694,7 +659,7 @@ background-color: rgb(34 197 94 / 20%);
   display: block;
   width: fit-content;
   border-radius: 6px;
-  padding: 10px;
+  padding: 5px 10px;
   background-color: #eee;
   font-size: 13px;
 }
@@ -787,3 +752,71 @@ background-color: rgb(34 197 94 / 20%);
   border-bottom: 1px solid #eee;
 }
 /* End Top Search */
+/* Start Latest Uploads */
+.page .content .wrapper .latest-uploads {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.page .content .wrapper .latest-uploads h2 {
+  margin: 0 0 20px
+}
+.page .content .wrapper .latest-uploads ul {
+  margin: 0;
+}
+.page .content .wrapper .latest-uploads ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+@media(max-width: 575px) {
+  .page .content .wrapper .latest-uploads ul li {
+    flex-direction: column;
+  }
+}
+.page .content .wrapper .latest-uploads ul li:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+.page .content .wrapper .latest-uploads ul li > div:first-child {
+  display: flex;
+  align-items: center;
+}
+@media(max-width: 575px) {
+  .page .content .wrapper .latest-uploads ul li > div:first-child {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.page .content .wrapper .latest-uploads ul li > div:first-child img {
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+}
+@media(max-width: 575px) {
+    .page .content .wrapper .latest-uploads ul li > div:first-child img {
+    margin: 0 0 10px;
+  }
+}
+.page .content .wrapper .latest-uploads ul li > div:first-child div span:first-child {
+  display: block;
+  padding-bottom: 5px;
+}
+@media(max-width: 575px) {
+    .page .content .wrapper .latest-uploads ul li > div:first-child {
+    margin: 0 0 10px;
+  }
+}
+.page .content .wrapper .latest-uploads ul li > div:first-child div span:last-child {
+  font-size: 15px;
+  color: var(--grey-color);
+}
+.page .content .wrapper .latest-uploads ul li > div:last-child {
+  width: fit-content;
+  border-radius: 6px;
+  padding: 5px 10px;
+  background-color: #eee;
+  font-size: 13px;
+}
+/* End Latest Uploads */
