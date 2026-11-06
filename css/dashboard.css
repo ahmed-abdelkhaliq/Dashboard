@@ -1286,6 +1286,9 @@ background-color: rgb(34 197 94 / 20%);
 .page .content .settings-page .general-info .general a {
   color: var(--blue-color);
 }
+.page .content .settings-page .general-info .general a:hover {
+  color: var(--blue-alt-color);
+}
 /* End General Info */
 /* Start Security Info */
 .page .content .settings-page .security-info .secur {
@@ -1313,6 +1316,9 @@ background-color: rgb(34 197 94 / 20%);
   font-weight: bold;
   background-color: var(--blue-color);
 }
+.page .content .settings-page .security-info .secur:first-of-type a:hover {
+  background-color: var(--blue-alt-color);
+}
 .page .content .settings-page .security-info .secur:last-child a {
   width: fit-content;
   border-radius: 6px;
@@ -1323,3 +1329,175 @@ background-color: rgb(34 197 94 / 20%);
   background-color:#eee;
 }
 /* End Security Info */
+/* Start Social Info */
+.page .content .settings-page .social-info .social {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.page .content .settings-page .social-info .social i {
+  width: 40px;
+  height: 40px;
+  background-color: #f6f6f6;
+  border: 1px solid #ddd;
+  border-right: none;
+  border-radius: 6px 0 0 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+  color: var(--grey-color);
+}
+.page .content .settings-page .social-info .social input {
+  height: 40px;
+  background-color: #f6f6f6;
+  border: 1px solid #ddd;
+  padding-left: 10px;
+  border-radius: 0 6px 6px 0;
+  outline: none;
+  width: 100%;
+}
+.page .content .settings-page .social-info .tiktok:focus-within i {
+  color: black;
+}
+.page .content .settings-page .social-info .facebook:focus-within i {
+  color: #1877f2;
+}
+.page .content .settings-page .social-info .youtube:focus-within i {
+  color: #ff0000;
+}
+.page .content .settings-page .social-info .linkedin:focus-within i {
+  color: #0077b5;
+}
+/* End Social Info */
+/* Start Widgets Control */
+.page .content .settings-page .widgets-control .control {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.page .content .settings-page .widgets-control .control input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.page .content .settings-page .widgets-control .control label {
+  padding-left: 30px;
+  cursor: pointer;
+  position: relative;
+}
+.page .content .settings-page .widgets-control .control label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--blue-color);
+  margin-top: -9px;
+  border-radius: 4px;
+}
+.page .content .settings-page .widgets-control .control label:hover::before{
+  border-color: var(--blue-alt-color);
+}
+.page .content .settings-page .widgets-control .control label::after {
+  font-family: var(--fa-style-family-classic);
+  content: "\f00c";
+  font-weight: 900;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 50%;
+  margin-top: -9px;
+  background-color: var(--blue-color);
+  color: white;
+  transform: scale(0) rotate(360deg);
+  transition: 0.4s;
+}
+.page .content .settings-page .widgets-control .control input[type="checkbox"]:checked + label::after {
+  transform: scale(1);
+}
+/* End Widgets Control */
+/* Start Backup Manager */
+.page .content .settings-page .backup-manager .time {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.page .content .settings-page .backup-manager  input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.page .content .settings-page .backup-manager .time label {
+  padding-left: 30px;
+  cursor: pointer;
+  position: relative;
+}
+.page .content .settings-page .backup-manager .time label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  margin-top: -11px;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--grey-color);
+  border-radius: 50%;
+}
+.page .content .settings-page .backup-manager .time label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  width: 14px;
+  height: 14px;
+  background: var(--blue-color);
+  border-radius: 50%;
+  transition: 0.4s;
+  transform: scale(0);
+}
+.page .content .settings-page .backup-manager .time input[type="radio"]:checked + label::before {
+  border-color: var(--blue-color);
+}
+.page .content .settings-page .backup-manager .time input[type="radio"]:checked + label::after {
+  transform: scale(1);
+}
+.page .content .settings-page .backup-manager .servers {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+@media (max-width: 767px) {
+  .page .content .settings-page .backup-manager .servers {
+    flex-wrap: wrap;
+  }
+}
+.page .content .settings-page .backup-manager .servers .server {
+  position: relative;
+  margin: 5px 5px 10px;
+  border-radius: 10px;
+  width: 100%;
+  border: 2px solid #eee;
+}
+.page .content .settings-page .backup-manager .servers .server label {
+  display: block;
+  padding: 15px;
+  cursor: pointer;
+}
+.page .content .settings-page .backup-manager .servers .server label i {
+  display: block;
+  margin: 0 auto 10px;
+}
+.page .content .settings-page .backup-manager .servers input[type="radio"]:checked + .server {
+  border-color: var(--blue-color);
+  color: var(--blue-color);
+}
+/* End Backup Manager */
