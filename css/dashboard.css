@@ -1764,3 +1764,146 @@ background-color: rgb(34 197 94 / 20%);
 
 /* End Other Data */
 /* End Profile Page */
+/* Start Projects Page */
+.page .content .projects-page {
+  display: grid;
+  margin: 20px;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+@media (max-width: 767px) {
+  .page .content .projects-page {
+  grid-template-columns: minmax(200px, 1fr);
+  gap: 10px;
+  margin: 0 10px;
+  }
+}
+.page .content .projects-page .project {
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+  position: relative;
+}
+.page .content .projects-page .project .date {
+  font-size: 13px;
+  color: var(--grey-color);
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.page .content .projects-page .project h4 {
+  margin: 0;
+  font-weight: normal;
+}
+.page .content .projects-page .project p {
+  margin: 10px 0;
+  color: var(--grey-color);
+  font-size: 14px;
+}
+.page .content .projects-page .project .team {
+  position: relative;
+  min-height: 80px;
+}
+.page .content .projects-page .project .team a {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.page .content .projects-page .project .team a:hover {
+  z-index: 10;
+}
+.page .content .projects-page .project .team a:nth-child(2) {
+  left: 25px;
+}
+.page .content .projects-page .project .team a:nth-child(3) {
+  left: 50px;
+}
+.page .content .projects-page .project .team a:nth-child(4) {
+  left: 75px;
+}
+.page .content .projects-page .project .team a:nth-child(5) {
+  left: 100px;
+}
+.page .content .projects-page .project .team a:hover img {
+  width: 60px;
+  height: 60px;
+}
+.page .content .projects-page .project .team img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: 0.4s;
+}
+.page .content .projects-page .project .do {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  margin-top: 15px;
+}
+@media (max-width: 767px) {
+  .page .content .projects-page .project .do {
+    flex-direction: column;
+  }
+}
+.page .content .projects-page .project .do span {
+  background-color: #eee;
+  font-size: 13px;
+  border-radius: 6px;
+  width: fit-content;
+  padding: 3px 8px;
+  margin-left: 5px;
+}
+@media (max-width: 767px) {
+  .page .content .projects-page .project .do span:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+.page .content .projects-page .project .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+  margin-top: 15px;
+  padding-top: 15px;
+}
+@media (max-width: 767px) {
+  .page .content .projects-page .project .info {
+    flex-direction: column;
+  }
+}
+.page .content .projects-page .project .info .prog {
+  background-color: #eee;
+  height: 8px;
+  width: 260px;
+  position: relative;
+  border-radius: 6px;
+}
+@media (max-width: 767px) {
+  .page .content .projects-page .project .info .prog {
+    width: 180px;
+    margin-bottom: 15px;
+  }
+}
+.page .content .projects-page .project .info .prog span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 6px;
+}
+.page .content .projects-page .project .info .red span {
+  background-color: var(--red-color);
+}
+.page .content .projects-page .project .info .green span {
+  background-color: var(--green-color);
+}
+.page .content .projects-page .project .info .blue span {
+  background-color: var(--blue-color);
+}
+.page .content .projects-page .project .info .money {
+  font-size: 14px;
+  color: var(--grey-color);
+}
+/* End Projects Page */
