@@ -1913,7 +1913,6 @@ background-color: rgb(34 197 94 / 20%);
   margin: 20px;
   gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-
 }
 @media (max-width: 767px) {
   .page .content .courses-page {
@@ -1977,3 +1976,112 @@ background-color: rgb(34 197 94 / 20%);
   color: var(--grey-color);
 }
 /* End Courses Page */
+/* Start Friends Page */
+.page .content .friends-page {
+  display: grid;
+  margin: 20px;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.page .content .friends-page .friend {
+  position: relative;
+  background-color: white;
+  border-radius: 6px;
+  padding: 20px;
+}
+.page .content .friends-page .friend .contact {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.page .content .friends-page .friend .contact i {
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 50%;
+  color: #666;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.4s;
+  width: 33px;
+}
+.page .content .friends-page .friend .contact i:hover {
+  background-color: var(--blue-color);
+  color: white;
+}
+.page .content .friends-page .friend .img {
+  text-align: center;
+}
+.page .content .friends-page .friend .img img {
+  border-radius: 50%;
+  margin: 10px 0 10px;
+  width: 100px;
+  height: 100px;
+}
+.page .content .friends-page .friend .img h4 {
+  margin: 0;
+}
+.page .content .friends-page .friend .img p {
+  color: var(--grey-color);
+  margin: 5px 0 0;
+  font-size: 13px;
+}
+.page .content .friends-page .friend .icons {
+  font-size: 14px;
+  position: relative;
+  padding: 15px 0 15px;
+  margin: 15px 0 15px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.page .content .friends-page .friend .icons .icon:not(:last-child) {
+  margin-bottom: 10px;
+}
+.page .content .friends-page .friend .icons .icon i {
+  margin-right: 5px;
+}
+.page .content .friends-page .friend .icons .vip {
+  font-weight: bold;
+  color: var(--orange-color);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  opacity: 0.3;
+}
+.page .content .friends-page .friend .info {
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page .content .friends-page .friend .info span {
+  color: var(--grey-color);
+}
+.page .content .friends-page .friend .info span {
+  color: var(--grey-color);
+}
+.page .content .friends-page .friend .info .link {
+  display: block;
+}
+.page .content .friends-page .friend .info .link a {
+  width: fit-content;
+  border-radius: 6px;
+  padding: 5px 10px;
+  color: white;
+  font-weight: bold;
+  transition: 0.4s;
+}
+.page .content .friends-page .friend .info .link a:first-of-type {
+  background-color: var(--blue-color);
+}
+.page .content .friends-page .friend .info .link a:first-of-type:hover {
+  background-color: var(--blue-alt-color);
+}
+.page .content .friends-page .friend .info .link a:last-of-type {
+  background-color: var(--red-color);
+}
+.page .content .friends-page .friend .info .link a:last-of-type:hover {
+  background-color: rgb(182, 1, 1);
+}
+/* End Friends Page */
