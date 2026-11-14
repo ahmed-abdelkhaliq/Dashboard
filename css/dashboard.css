@@ -1983,6 +1983,13 @@ background-color: rgb(34 197 94 / 20%);
   gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
+@media (max-width: 767px) {
+  .page .content .friends-page {
+    grid-template-columns: minmax(200px, 1fr);
+    gap: 10px;
+    margin: 0 10px;
+  }
+}
 .page .content .friends-page .friend {
   position: relative;
   background-color: white;
@@ -2085,3 +2092,261 @@ background-color: rgb(34 197 94 / 20%);
   background-color: rgb(182, 1, 1);
 }
 /* End Friends Page */
+/* Start Files Page */
+.page .content .files-page {
+  display: flex;
+  margin: 20px;
+  gap: 20px;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+}
+@media (max-width: 767px) {
+  .page .content .files-page {
+    flex-direction: column;
+    align-items: normal;
+  }
+}
+.page .content .files-page .files-stats {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  min-width: 260px;
+}
+.page .content .files-page .files-stats h2 {
+  margin: 0 0 15px;
+
+}
+@media (max-width: 767px) {
+  .page .content .files-page .files-stats h2 {
+    text-align: center;
+  }
+}
+.page .content .files-page .files-stats .Statistics {
+  display: flex;
+  align-items: center;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+.page .content .files-page .files-stats .Statistics .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.page .content .files-page .files-stats .Statistics .size {
+  margin-left: auto;
+}
+.page .content .files-page .files-stats .Statistics .blue {
+  color: var(--blue-color);
+  background-color: rgb(0 117 255 / 20%);
+}
+.page .content .files-page .files-stats .Statistics .green {
+  color: var(--green-color);
+  background-color: rgb(34 197 94 / 20%);
+}
+.page .content .files-page .files-stats .Statistics .red {
+  color: var(--red-color);
+  background-color: rgb(244 67 54 / 20%);
+}
+.page .content .files-page .files-stats .Statistics .orange {
+  color: var(--orange-color);
+  background-color: rgb(245 158 11 / 20%);
+}
+.page .content .files-page .files-stats .Statistics span:nth-of-type(2) {
+  color: var(--grey-color);
+  display: block;
+  margin-top: 5px;
+}
+.page .content .files-page .files-stats .Statistics .size {
+  color: var(--grey-color);
+}
+.page .content .files-page .files-stats .upload {
+  color: white;
+  font-size: 13px;
+  border-radius: 6px;
+  display: block;
+  width: fit-content;
+  background-color: var(--blue-color);
+  margin: 15px auto 0;
+  padding: 10px 15px;
+  transition: 0.4s;
+}
+.page .content .files-page .files-stats .upload:hover {
+  background-color: var(--blue-alt-color);
+}
+.page .content .files-page .files-stats .upload:hover i {
+  animation: go-up 0.8s infinite;
+}
+
+.page .content .files-page .files-stats .upload i {
+  margin-right: 10px;
+}
+@keyframes go-up {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.page .content .files-page .files-content {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+.page .content .files-page .files-content .box {
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+.page .content .files-page .files-content .box i {
+  color: var(--grey-color);
+  position: absolute;
+}
+.page .content .files-page .files-content .box .icon {
+  text-align: center;
+}
+.page .content .files-page .files-content .box .icon img {
+  width: 64px;
+  height: 64px;
+  margin: 15px auto 15px;
+  transition: 0.4s;
+}
+.page .content .files-page .files-content .box:hover img {
+  animation: l-r 0.8s infinite ;
+}
+@keyframes l-r {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+.page .content .files-page .files-content .box .txt {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.page .content .files-page .files-content .box p {
+  font-size: 13px;
+  color: var(--grey-color);
+}
+.page .content .files-page .files-content .box .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--grey-color);
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+/* End Files Page */
+/* Start Plans Page */
+.page .content .plans-page {
+  display: grid;
+  margin: 20px;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+.page .content .plans-page .plan {
+  background-color: white;
+  border-radius: 6px;
+  padding: 20px;
+}
+.page .content .plans-page .plan .top {
+  text-align: center;
+  padding: 20px;
+  border: 3px solid white;
+  outline: 3px solid transparent;
+}
+.page .content .plans-page .green .top {
+  background-color: var(--green-color);
+  outline-color: var(--green-color);
+}
+.page .content .plans-page .blue .top {
+  background-color: var(--blue-color);
+  outline-color: var(--blue-color);
+}
+.page .content .plans-page .orange .top {
+  background-color: var(--orange-color);
+  outline-color: var(--orange-color);
+}
+.page .content .plans-page .plan .top .price {
+  position: relative;
+  font-size: 40px;
+  width: fit-content;
+  margin: auto;
+}
+.page .content .plans-page .plan .top .price span {
+  position: absolute;
+  left: -20px;
+  top: 0;
+  font-size: 25px;
+}
+.page .content .plans-page .orange p {
+  text-align: center;
+  color: var(--grey-color);
+}
+.page .content .plans-page .plan .top h2 {
+  margin-bottom: 10px;
+  color: white;
+}
+.page .content .plans-page .plan .top .price {
+  color: white;
+}
+.page .content .plans-page .plan ul {
+  margin: 20px 0 20px;
+}
+.page .content .plans-page .plan ul li {
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  border-bottom: 1px solid #eee;
+}
+.page .content .plans-page .plan ul li .yes {
+  color: var(--green-color);
+}
+.page .content .plans-page .plan ul li i:first-child {
+  margin-right: 5px;
+  font-size: 18px;
+}
+.page .content .plans-page .plan ul li i:not(.yes, .help) {
+  color: var(--red-color);
+}
+.page .content .plans-page .plan ul li .help {
+  color: var(--grey-color);
+  margin-left: auto;
+  cursor: pointer;
+}
+.page .content .plans-page .plan a {
+  color: white;
+  font-size: 13px;
+  border-radius: 6px;
+  display: block;
+  width: fit-content;
+  margin: 15px auto 0;
+  padding: 10px 15px;
+  transition: 0.4s;
+}
+.page .content .plans-page .green a {
+  background-color: var(--green-color);
+}
+.page .content .plans-page .blue a {
+  background-color: var(--blue-color);
+}
+/* End Plans Page */
