@@ -2040,7 +2040,7 @@ background-color: rgb(34 197 94 / 20%);
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 }
-.page .content .friends-page .friend .icons .icon:not(:last-child) {
+.page .content .friends-page .friend .icons > .icon:not(:last-child) {
   margin-bottom: 10px;
 }
 .page .content .friends-page .friend .icons .icon i {
